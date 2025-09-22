@@ -132,7 +132,7 @@ export const OrderListPage: React.FC = () => {
                   <tr key={order.uuid} className="hover:bg-gray-50 transition-colors">
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{order.cliente}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{order.produto}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{order.dataCriacao}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{new Date(order.dataCriacao).toLocaleDateString('pt-BR')}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ {order.valor.toFixed(2)}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500"><StatusBadge status={order.status} /></td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
